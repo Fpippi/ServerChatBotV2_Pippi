@@ -2,12 +2,14 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+
 namespace ServerChatBotV2_Pippi
 {
     class Program
     {
         static void Main(string[] args)
         {
+            
             // Lister: in ascolto quando si parla dei server
             // EndPoint: identifica una coppia IP/Porta
 
@@ -63,6 +65,7 @@ namespace ServerChatBotV2_Pippi
                         case "come va?":
                             sendString = "Tutto bene grazie";
                             break;
+
                         case "quit":
 
                             Array.Clear(buff, 0, buff.Length);
@@ -79,7 +82,10 @@ namespace ServerChatBotV2_Pippi
                             return;
 
                         case "che fai?":
-                            sendString = "Ti ascolto";
+                            sendString = "Ti ascolto per risponderti";
+                            break;
+                        case "Chi mi ha programmato?":
+                            sendString = "Il mio programmatore è stato Francesco Pippi";
                             break;
                         default:
                             sendString = "Non ho capito";
@@ -97,6 +103,9 @@ namespace ServerChatBotV2_Pippi
 
 
                 Array.Clear(buff, 0, buff.Length);
+
+
             }
+        }
     }
 }
