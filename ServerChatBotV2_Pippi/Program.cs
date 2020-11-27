@@ -84,7 +84,7 @@ namespace ServerChatBotV2_Pippi
                         case "che fai?":
                             sendString = "Ti ascolto per risponderti";
                             break;
-                        case "Chi mi ha programmato?":
+                        case "chi mi ha programmato?":
                             sendString = "Il mio programmatore è stato Francesco Pippi";
                             break;
                         default:
@@ -99,12 +99,7 @@ namespace ServerChatBotV2_Pippi
                     //invio al client il messaggio
                     sendedBytes = client.Send(buff);
                 }
-
-
-
                 Array.Clear(buff, 0, buff.Length);
-
-
             }
         }
     }
